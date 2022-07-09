@@ -109,7 +109,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if searchWordTextField.text == "삼귀자" {
             resultLabel.text = newlyCoinedWordDic["삼귀자"]
         } else if searchWordTextField.text == "윰차" {
-            resultLabel.text = newlyCoinedWordDic["구독자가 많은사람과 적은사람을 차별하는 것"]
+            resultLabel.text = newlyCoinedWordDic["윰차"]
         } else if searchWordTextField.text == "만반잘부" {
             resultLabel.text = newlyCoinedWordDic["만반잘부"]
         } else if searchWordTextField.text == "꾸안꾸" {
@@ -117,9 +117,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         } else if searchWordTextField.text == "옴곡옾높" {
             resultLabel.text = newlyCoinedWordDic["옴곡옾높"]
         } else if searchWordTextField.text == "머선129" {
-            resultLabel.text = newlyCoinedWordDic["무슨 일이야?"]
-        } else if searchWordTextField.text == "무물보" {
             resultLabel.text = newlyCoinedWordDic["머선129"]
+        } else if searchWordTextField.text == "무물보" {
+            resultLabel.text = newlyCoinedWordDic["무물보"]
         } else if searchWordTextField.text == "반모" {
             resultLabel.text = newlyCoinedWordDic["반모"]
         } else if searchWordTextField.text == "킹리적갓심" {
