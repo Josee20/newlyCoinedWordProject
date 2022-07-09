@@ -77,7 +77,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpB-op-FLA">
-                                <rect key="frame" x="207" y="443" width="0.0" height="0.0"/>
+                                <rect key="frame" x="207" y="448" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -85,7 +85,9 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="vpB-op-FLA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="44P-OB-8XD"/>
                             <constraint firstItem="Fih-ZU-ZB9" firstAttribute="top" secondItem="8u0-gh-Bj6" secondAttribute="bottom" constant="19" id="98i-oW-ELt"/>
                             <constraint firstItem="Ao0-Er-cwg" firstAttribute="top" secondItem="lYm-8Q-l1M" secondAttribute="bottom" constant="160" id="AAx-ws-FNh"/>
                             <constraint firstItem="g7D-Ee-nFu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="Aeh-IC-Hbg"/>
@@ -95,7 +97,7 @@
                             <constraint firstItem="lYm-8Q-l1M" firstAttribute="top" secondItem="cPe-qE-gMJ" secondAttribute="bottom" constant="19" id="LHt-3I-sYb"/>
                             <constraint firstItem="Ao0-Er-cwg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OSu-Tx-4Fd"/>
                             <constraint firstItem="vpB-op-FLA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OyV-q5-dHt"/>
-                            <constraint firstItem="vpB-op-FLA" firstAttribute="top" secondItem="Fih-ZU-ZB9" secondAttribute="bottom" constant="255" id="TkS-xz-SWu"/>
+                            <constraint firstItem="vpB-op-FLA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Fih-ZU-ZB9" secondAttribute="bottom" constant="150" id="TkS-xz-SWu"/>
                             <constraint firstItem="cPe-qE-gMJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="bqN-d3-pTh"/>
                             <constraint firstItem="g7D-Ee-nFu" firstAttribute="top" secondItem="cPe-qE-gMJ" secondAttribute="bottom" constant="19" id="bzG-6s-yPJ"/>
                             <constraint firstItem="Ao0-Er-cwg" firstAttribute="top" secondItem="rBg-rc-q8C" secondAttribute="bottom" constant="160" id="g9I-F2-pVY"/>
@@ -109,6 +111,9 @@
                             <constraint firstItem="8u0-gh-Bj6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="wzL-bU-kaC"/>
                             <constraint firstItem="Ao0-Er-cwg" firstAttribute="top" secondItem="g7D-Ee-nFu" secondAttribute="bottom" constant="160" id="zF9-Qp-m0I"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="tpI-9Z-ikV" appends="YES" id="iGA-uo-Iiy"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="firstHashTagBtn" destination="g7D-Ee-nFu" id="Xx6-Mj-Efi"/>
@@ -121,6 +126,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="tpI-9Z-ikV">
+                    <connections>
+                        <action selector="screenClicked:" destination="BYZ-38-t0r" id="ZhK-7c-Esx"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-255" y="-461"/>
         </scene>

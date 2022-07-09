@@ -7,8 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
+    
+   
+    
     var newlyCoinedWordDic: [String:String] = [
         "삼귀자":"연애를 시작하기 전 썸단계!",
         "윰차":"구독자가 많은사람과 적은사람을 차별하는 것",
@@ -21,6 +24,7 @@ class ViewController: UIViewController {
         "킹리적갓심":"합리적인 의심",
         // 여러 줄 출력되는지 확인용
         // 두 줄 이상일 때도 가운데로 오게하는 방법은 없을까?
+        // >> 레이아웃 버티컬 센터 잡고 Top간격 >= 150(상자안에 들어가게) 이상 해주면 됨
         "룰루" : "ㅁㅈㄹ대;ㅕㅑㅁㅈㄷㄹ;ㅐㅑㅈㄷ랮먀;덜매;ㅈ댜ㅓ램ㅈ댜ㅓ램ㅈ댜ㅓ해ㅑ덪ㄱ해ㅑㄷ검해ㅑㅓㄷㄱ매햐ㅓㄷ개ㅑ헏개ㅑ헏갸ㅐ허ㅐ댝허ㅑㅐㄷ겋"
     ]
     
@@ -37,20 +41,27 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var resultLabel: UILabel!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         searchWordTextFieldSetting(borderWidth: 2)
         searchBtnSet(btnColor: UIColor.white, bgdColor: UIColor.black)
-        
         hashTagBtnGroupSet(borderWidth: 0.9)
         
-        
-        
+        searchWordTextField.delegate = self
+    
         // 키 값만 랜덤으로 못뽑아내나? 타입이 안 맞아서 그런건가???
         
     }
-
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchBtnClicked(searchBtn)
+        searchWordTextField.resignFirstResponder()
+        return true
+    }
+    
     func searchWordTextFieldSetting(borderWidth: CGFloat ) {
         searchWordTextField.layer.borderWidth = borderWidth
         searchWordTextField.placeholder = "단어를 입력해주세요"
@@ -132,5 +143,10 @@ class ViewController: UIViewController {
     @IBAction func fourthHashTagBtnClicked(_ sender: Any) {
         resultLabel.text = newlyCoinedWordDic["꾸안꾸"]
     }
+    
+    @IBAction func screenClicked(_ sender: Any) {
+        searchWordTextField.endEditing(true)
+    }
+    
 }
 
