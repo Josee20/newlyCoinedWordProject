@@ -8,9 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
-
-    
-   
     
     var newlyCoinedWordDic: [String:String] = [
         "삼귀자":"연애를 시작하기 전 썸단계!",
@@ -27,6 +24,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // >> 레이아웃 버티컬 센터 잡고 Top간격 >= 150(상자안에 들어가게) 이상 해주면 됨
         "룰루" : "ㅁㅈㄹ대;ㅕㅑㅁㅈㄷㄹ;ㅐㅑㅈㄷ랮먀;덜매;ㅈ댜ㅓ램ㅈ댜ㅓ램ㅈ댜ㅓ해ㅑ덪ㄱ해ㅑㄷ검해ㅑㅓㄷㄱ매햐ㅓㄷ개ㅑ헏개ㅑ헏갸ㅐ허ㅐ댝허ㅑㅐㄷ겋"
     ]
+    
+    var config = UIButton.Configuration.plain()
     
     @IBOutlet weak var searchWordTextField: UITextField!
     
@@ -51,9 +50,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         hashTagBtnGroupSet(borderWidth: 0.9)
         
         searchWordTextField.delegate = self
-    
-        // 키 값만 랜덤으로 못뽑아내나? 타입이 안 맞아서 그런건가???
         
+        config.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
+        
+        // 키 값만 랜덤으로 못뽑아내나? 타입이 안 맞아서 그런건가???
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -98,6 +98,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         secondHashTagBtn.setTitleColor(.black, for: .normal)
         thirdHashTagBtn.setTitleColor(.black, for: .normal)
         fourthHashTagBtn.setTitleColor(.black, for: .normal)
+        
+        firstHashTagBtn.configuration = config
+        secondHashTagBtn.configuration = config
+        thirdHashTagBtn.configuration = config
+        fourthHashTagBtn.configuration = config
     }
     
     @IBAction func searchBtnClicked(_ sender: UIButton) {

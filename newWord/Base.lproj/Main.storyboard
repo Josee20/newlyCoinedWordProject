@@ -101,7 +101,7 @@
                             <constraint firstItem="cPe-qE-gMJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="bqN-d3-pTh"/>
                             <constraint firstItem="g7D-Ee-nFu" firstAttribute="top" secondItem="cPe-qE-gMJ" secondAttribute="bottom" constant="19" id="bzG-6s-yPJ"/>
                             <constraint firstItem="Ao0-Er-cwg" firstAttribute="top" secondItem="rBg-rc-q8C" secondAttribute="bottom" constant="160" id="g9I-F2-pVY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Fih-ZU-ZB9" secondAttribute="trailing" constant="93" id="gDd-dN-jKE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Fih-ZU-ZB9" secondAttribute="trailing" constant="30" id="gDd-dN-jKE"/>
                             <constraint firstItem="lYm-8Q-l1M" firstAttribute="leading" secondItem="g7D-Ee-nFu" secondAttribute="trailing" constant="5" id="grT-nu-S7x"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="vpB-op-FLA" secondAttribute="trailing" constant="30" id="heq-Zi-7bh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8u0-gh-Bj6" secondAttribute="trailing" constant="60" id="iG9-4v-DoZ"/>
@@ -132,7 +132,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-255" y="-461"/>
+            <point key="canvasLocation" x="-857" y="-570"/>
         </scene>
     </scenes>
     <resources>
