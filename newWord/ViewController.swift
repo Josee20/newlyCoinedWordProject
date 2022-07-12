@@ -51,7 +51,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         searchWordTextField.delegate = self
         
-        config.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
+        config.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 2, bottom: 5, trailing: 2)
         
         // 키 값만 랜덤으로 못뽑아내나? 타입이 안 맞아서 그런건가???
     }
